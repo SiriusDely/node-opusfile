@@ -1,0 +1,3 @@
+[submodule "opusfile"]
+	path = opusfile
+	url = https://github.com/SmartWalkieOrg/opusfile

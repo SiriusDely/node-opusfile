@@ -1,0 +1,30 @@
+{
+  "name": "node-opusfile",
+  "version": "0.0.1",
+  "description": "Node Opusfile",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siriusdely/node-opusfile.git"
+  },
+  "keywords": [
+    "opus",
+    "node-opus",
+    "node-opusfile",
+    "xiph",
+    "encode",
+    "decode",
+    "encoder",
+    "decoder",
+    "ogg"
+  ],
+  "author": "Sirius Dely <siriusmdely@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siriusdely/node-opusfile/issues"
+  },
+  "homepage": "https://github.com/siriusdely/node-opusfile#readme"
+}
