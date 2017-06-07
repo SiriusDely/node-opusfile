@@ -43,7 +43,8 @@
         'ldflags': [
         ],
         'libraries': [
-          '-lopus'
+          '-lopus',
+          '-logg'
         ]
       }
     }
