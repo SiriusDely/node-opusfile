@@ -157,6 +157,7 @@ node_modules/
 .vscode
 /coverage
 /test/data/
+*.opus
 
 ### OSX ###
 .DS_Store

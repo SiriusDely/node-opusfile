@@ -65,7 +65,8 @@
         '-g', '-O2', '-std=c89',
         '-pedantic',
         '-Wno-long-long',
-        '-MT', '-MD', '-MP', '-MF'
+        '-MT', '-MD', '-MP', '-MF',
+        '-Wincompatible-pointer-type'
       ],
       'include_dirs': [
         '/usr/local/include',
