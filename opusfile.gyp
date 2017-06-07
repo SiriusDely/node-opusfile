@@ -41,18 +41,31 @@
         'opusfile/src/stream.c'
       ],
       'cflags': [
+        '-pthread',
+        '-fno-exceptions',
+        '-fno-strict-aliasing',
+        '-Wall',
+        '-Wno-unused-parameter',
+        '-Wno-missing-field-initializers',
+        '-Wextra',
+        '-pipe',
+        '-fno-ident',
+        '-fdata-sections',
+        '-ffunction-sections',
+        '-fPIC',
         '-fvisibility=hidden',
         '-W',
         '-Wstrict-prototypes',
-        '-Wall',
-        '-Wextra',
         '-Wcast-align',
         '-Wnested-externs',
         '-Wshadow',
         '-Wno-parentheses',
-        '-Wno-unused-parameter',
         '-Wno-sign-compare',
-        '-Wno-maybe-uninitialized'
+        '-Wno-maybe-uninitialized',
+        '-g', '-O2', '-std=c89',
+        '-pedantic',
+        '-Wno-long-long',
+        '-MT', '-MD', '-MP', '-MF'
       ],
       'include_dirs': [
         '/usr/local/include',
@@ -62,9 +75,29 @@
         'opusfile/src'
       ],
       'defines': [
+        'LARGEFILE_SOURCE',
+        '_FILE_OFFSET_BITS=64',
+        'WEBRTC_TARGET_PC',
+        'WEBRTC_LINUX',
+        'WEBRTC_THREAD_RR',
+        'EXPAT_RELATIVE_PATH',
+        'GTEST_RELATIVE_PATH',
+        'JSONCPP_RELATIVE_PATH',
+        'WEBRTC_RELATIVE_PATH',
+        'POSIX',
+        '__STDC_FORMAT_MACROS',
+        'DYNAMIC_ANNOTATIONS_ENABLED=0',
         'PIC',
         'HAVE_CONFIG_H',
-      ]
+      ],
+      'link_settings': {
+        'ldflags': [
+        ],
+        'libraries': [
+          '-lopus',
+          '-logg'
+        ]
+      }
     }
   ]
 }
