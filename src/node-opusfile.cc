@@ -151,7 +151,7 @@ void cleanupRecorder() {
   memset(&op, 0, sizeof(ogg_packet));
   memset(&og, 0, sizeof(ogg_page));
 
-  fprintf(stderr, "Recording ends!!!\n");
+  // fprintf(stderr, "Recording ends!!!\n");
 }
 
 int opus_header_to_packet_(const OpusHeader *h, unsigned char *packet, int len) {
@@ -262,7 +262,7 @@ static int writeOggPage(ogg_page *page, FILE *os) {
 int initRecorder(const char *path) {
   cleanupRecorder();
 
-  fprintf(stderr, "in Recorder, path: %s\n", path);
+  // fprintf(stderr, "in Recorder, path: %s\n", path);
   if (!path) {
     return 0;
   }
@@ -482,7 +482,7 @@ int writeFrame(uint8_t *framePcmBytes, unsigned int frameByteCount) {
         pages_out++;
     }
 
-    fprintf(stderr, "last byte_written is %lld\n", bytes_written);
+    // fprintf(stderr, "last byte_written is %lld\n", bytes_written);
     return 1;
 }
 
