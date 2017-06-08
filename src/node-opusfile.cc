@@ -594,7 +594,7 @@ int writeFrame(uint8_t *framePcmBytes, unsigned int frameByteCount) {
 #define ENCODER_SIZE 133
 #define MAX_BUFFER_SIZE 1920
 
-void WhoAmI(const v8::FunctionCallbackInfo<v8::Value>& args) {
+void Normalize(const v8::FunctionCallbackInfo<v8::Value>& args) {
   v8::Isolate* isolate = args.GetIsolate();
   int _argc = args.Length();
 
@@ -935,7 +935,7 @@ void WhoAmI(const v8::FunctionCallbackInfo<v8::Value>& args) {
 }
 
 void Initialize(v8::Local<v8::Object> exports) {
-  NODE_SET_METHOD(exports, "WhoAmI", WhoAmI);
+  NODE_SET_METHOD(exports, "Normalize", Normalize);
 }
 
 NODE_MODULE(module_name, Initialize)
