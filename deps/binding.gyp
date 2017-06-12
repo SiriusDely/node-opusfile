@@ -34,11 +34,11 @@
       'target_name': 'libopusfile',
       'type': 'static_library',
       'sources': [
-        '../opusfile/src/http.c',
-        '../opusfile/src/info.c',
-        '../opusfile/src/internal.c',
-        '../opusfile/src/opusfile.c',
-        '../opusfile/src/stream.c'
+        'opusfile/src/http.c',
+        'opusfile/src/info.c',
+        'opusfile/src/internal.c',
+        'opusfile/src/opusfile.c',
+        'opusfile/src/stream.c'
       ],
       'cflags': [
         '-pthread',
@@ -67,8 +67,8 @@
         '/usr/local/include',
         '/usr/local/include/opus',
         'config/opusfile/<(OS)/<(target_arch)',
-        '../opusfile/include',
-        '../opusfile/src'
+        'opusfile/include',
+        'opusfile/src'
       ],
       'defines': [
         'LARGEFILE_SOURCE',
