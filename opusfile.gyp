@@ -44,10 +44,7 @@
         '-pthread',
         '-fno-exceptions',
         '-fno-strict-aliasing',
-        '-Wall',
-        '-Wno-unused-parameter',
         '-Wno-missing-field-initializers',
-        '-Wextra',
         '-pipe',
         '-fno-ident',
         '-fdata-sections',
@@ -56,17 +53,15 @@
         '-fvisibility=hidden',
         '-W',
         '-Wstrict-prototypes',
+        '-Wall',
+        '-Wextra',
         '-Wcast-align',
         '-Wnested-externs',
         '-Wshadow',
         '-Wno-parentheses',
+        '-Wno-unused-parameter',
         '-Wno-sign-compare',
-        '-Wno-maybe-uninitialized',
-        '-g', '-O2', '-std=c89',
-        '-pedantic',
-        '-Wno-long-long',
-        '-MT', '-MD', '-MP', '-MF',
-        '-Wincompatible-pointer-type'
+        '-Wno-maybe-uninitialized'
       ],
       'include_dirs': [
         '/usr/local/include',
@@ -89,7 +84,7 @@
         '__STDC_FORMAT_MACROS',
         'DYNAMIC_ANNOTATIONS_ENABLED=0',
         'PIC',
-        'HAVE_CONFIG_H',
+        'HAVE_CONFIG_H'
       ],
       'link_settings': {
         'ldflags': [
