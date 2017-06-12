@@ -66,7 +66,7 @@
       'include_dirs': [
         '/usr/local/include',
         '/usr/local/include/opus',
-        'config/opusfile/<(OS)/<(target_arch)',
+        'src/config/opusfile/<(OS)/<(target_arch)',
         'opusfile/include',
         'opusfile/src'
       ],
