@@ -4,6 +4,7 @@
   "description": "Node Opusfile",
   "main": "index.js",
   "scripts": {
+    "preinstall": "git clone https://github.com/SmartWalkieOrg/opusfile.git --depth=1 && node-gyp rebuild",
     "test": "mocha"
   },
   "repository": {
