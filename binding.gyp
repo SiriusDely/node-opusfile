@@ -3,7 +3,7 @@
     {
       'target_name': 'node-opusfile',
       'dependencies': [
-        'opusfile.gyp:libopusfile'
+        'src/binding.gyp:libopusfile'
       ],
       'include_dirs': [
         "<!(node -e \"require('nan')\")"
