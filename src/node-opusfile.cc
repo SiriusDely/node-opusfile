@@ -63,7 +63,7 @@ typedef struct {
 const opus_int32 bitrate = 16000;
 const opus_int32 rate = 16000;
 const opus_int32 frame_size = 960;
-const int with_cvbr = 1;
+// const int with_cvbr = 1;
 const int max_ogg_delay = 0;
 const int comment_padding = 512;
 
@@ -547,10 +547,10 @@ void Normalize(const v8::FunctionCallbackInfo<v8::Value>& args) {
 
   while (!feof(fin)) {
     i++;
-    fread(bytes, sizeof(unsigned char), ENCODER_SIZE, fin);
+    size_t stfrd = fread(bytes, sizeof(unsigned char), ENCODER_SIZE, fin);
     res = opus_decode(decoder, bytes, ENCODER_SIZE, (short *)(pcm_frame_2), FRAME_SIZE, 0);
     if (res < 0) {
-      fprintf(stderr, "\nres: %d decoder: %s", res, opus_strerror(res));
+      fprintf(stderr, "\nstfrd: %zu res: %d decoder: %s", stfrd, res, opus_strerror(res));
       // return EXIT_FAILURE;
     }
     writeFrame(pcm_frame_2, MAX_BUFFER_SIZE);
