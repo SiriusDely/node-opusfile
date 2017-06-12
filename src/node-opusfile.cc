@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
-#include "../opusfile/include/opusfile.h"
+#include "../deps/opusfile/include/opusfile.h"
 #include <opus/opus.h>
 #include <ogg/ogg.h>
 
